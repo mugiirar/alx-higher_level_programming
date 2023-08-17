@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-# 9-multiply_by_2.py
 
 def multiply_by_2(a_dictionary):
-    ""multiply by two""
     p_dir = a_dictionary.copy()
     list_keys = list(p_dir.keys())
 
