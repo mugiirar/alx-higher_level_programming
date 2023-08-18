@@ -12,5 +12,5 @@ if dig > 5:
 if dig == 0:
     print("Last digit of "+ num + " is " + num[-1:]+ " and is greater than 0")
 
-if dig < 6:
+if dig < 6 and dig != 0:
     print("Last digit of " + num + " is " + num[-1:] + " and is less than 6 and not 0")
