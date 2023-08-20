@@ -5,11 +5,11 @@ if __name__ == "__main__":
     length = len(sys.argv) - 1
 
     if length == 0:
-        print("0 arguments.")
+        print("{} arguments.".format(length))
 
     if length == 1:
-        print("1 argument:")
-        print("1: " + sys.argv[1])
+        print("{} argument:".format(length))
+        print("{}: ".format(length) + sys.argv[1])
 
     if length > 2:
         print ("{} arguments:".format(length))
