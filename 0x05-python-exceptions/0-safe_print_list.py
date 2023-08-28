@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-# 0-safe_print_list.py
 
 def safe_print_list(my_list=[], x=0):
-    
     k = 0
-
     while k < x:
         try:
             print(f"{my_list[k]}", end="")
@@ -12,7 +9,5 @@ def safe_print_list(my_list=[], x=0):
 
         except IndexError:
             break
-
     print()
-
     return k
