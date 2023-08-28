@@ -7,7 +7,7 @@ def safe_print_list(my_list=[], x=0):
 
     while k < x:
         try:
-            print("", my_list[k], end="")
+            print(f"{my_list[k]}", end="")
             k = k + 1
 
         except IndexError:
