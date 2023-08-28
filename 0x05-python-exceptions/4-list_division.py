@@ -22,5 +22,4 @@ def list_division(my_list_1, my_list_2, list_length):
         finally:
             length.append(element)
             track += 1
-
     return length
