@@ -28,8 +28,13 @@ class Square:
 
     def my_print(self):
         """square with the character"""
-        for p in range(0, self.__size):
-            [print("#", end="") for k in range(self.__size)]
+        p = 0
+        while p < self.__size:
+            k = 0
+            while k < self.__size:
+                print("#", end="")
+                k += 1
+            p += 1
             print("")
         if self.__size == 0:
             print("")
