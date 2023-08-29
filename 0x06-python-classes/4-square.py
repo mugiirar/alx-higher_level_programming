@@ -8,7 +8,7 @@ class Square:
     """body """
     def __init__(self, size=0):
         """Square"""
-        self.size = size
+        self.__size = size
 
     def size(self):
         return (self.__size)
