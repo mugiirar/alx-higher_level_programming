@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """
-creating rectangle
+rectangle class
 """
 
 
 class Rectangle:
+    """rectangle defination"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -29,6 +30,7 @@ class Rectangle:
     def height(self, value):
         if type(value) is not int:
             raise TypeError("height must be an integer")
-        if height < 0:
+        if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
