@@ -1,0 +1,10 @@
+Import the function:
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+	>>> text_indentation(9)
+	Traceback (most recent call last):
+	raise TypeError: text must be a string
+
+	>>> text_indentation("""This is my try""")
+	This is my try
