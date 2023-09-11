@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+"""gives available methods of an object"""
 
 def lookup(obj):
-    atts = dir(obj)
+    """defination of lookup"""
 
-    return atts
+    return (dir(obj))
