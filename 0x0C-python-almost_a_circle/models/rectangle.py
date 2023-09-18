@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+"""implementation of the base class"""
 
 from models.base import Base
 
+
 class Rectangle(Base):
+    """defining body of rectangle
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
@@ -12,10 +16,14 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """private width attribute
+        """
         return self.__width
 
     @width.setter
     def width(self, n_width):
+        """setting the private attribute width
+        """
         if type(n_width) != int:
             raise TypeError("width must be an integer")
         if n_width <= 0:
@@ -25,10 +33,14 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """private attribute height
+        """
         return self.__height
 
     @height.setter
     def height(self, n_height):
+        """setting the height
+        """
         if type(n_height) != int:
             raise TypeError("height must be an integer")
         if n_height <= 0:
@@ -37,10 +49,14 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """returning the private attribute x
+        """
         return self.__x
 
     @x.setter
     def x(self, n_x):
+        """setting the private attribute x
+        """
         if type(n_x) != int:
             raise TypeError("x must be an integer")
         if n_x < 0:
@@ -49,10 +65,14 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """return the private attribute y
+        """
         return self.__y
 
     @y.setter
     def y(self, n_y):
+        """setting the private attribute y
+        """
         if type(n_y) != int:
             raise TypeError("y must be an integer")
         if n_y < 0:
@@ -60,9 +80,13 @@ class Rectangle(Base):
         self.__y = n_y
 
     def area(self):
+        """calculating area
+        """
         return (self.__width * self.__height)
 
     def display(self):
+        """dispalying the location of the figure
+        """
         z = 0
         while (z < self.__y):
             print("")
@@ -83,10 +107,14 @@ class Rectangle(Base):
 
 
     def __str__(self):
+        """string representation of the object
+        """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
 
 
     def update(self, *args, **kwargs):
+        """updating attributes of the rectangle
+        """
         if len(args) == 0:
             for key, value in kwargs.items():
                 setattr(self, key, value)
@@ -106,6 +134,8 @@ class Rectangle(Base):
             k += 1
 
     def to_dictionary(self):
+        """making a dictionary of the object
+        """
         my_dict = {
                 "id": self.id,
                 "width": self.width,
