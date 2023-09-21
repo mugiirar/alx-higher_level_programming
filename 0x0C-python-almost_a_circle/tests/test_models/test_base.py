@@ -1,26 +1,24 @@
 #!/usr/bin/python3
-"""Unittests for base
-"""
+"""making unittests"""
 
-import unittest
 from models.base import Base
+import unittest
 
 
 class TestBase(unittest.TestCase):
-    """Define unit test for Base model"""
+    """defination of the base"""
 
     def test_initialization(self):
-        base1 = Base()
-        base2 = Base()
-        self.assertEqual(base1.id, 1)
-        self.assertEqual(base2.id, 2)
+        b1 = Base()
+        b2 = Base()
+        b3 = Base()
+        self.assertEqual(b1.id, 1)
+        self.assertEqual(b2.id, 2)
+        self.assertEqual(b3.id, 3)
 
-    def test_saving_id(self):
-        base = Base(100)
-        self.assertEqual(base.id, 100)
+    def test_newid(self):
+        b4 = Base(12)
+        b5 = Base(15)
+        self.assertEqual(b4.id, 12)
+        self.assertEqual(b5.id, 15)
 
-    def test_to_json_string_valid(self):
-        pass
-
-if __name__ == '__main__':
-    unittest.main()
