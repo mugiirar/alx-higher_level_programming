@@ -1,14 +1,10 @@
 #!/usr/bin/node
 
-const list = process.argv.length;
+const list = process.argv.length-2;
 
-let num = list - 2;
 
-if (num === 0)
-{
+if (list === 0) {
 	console.log('No argument');
-}
-else
-{
+} else {
 	console.log('Arguments found');
 }
