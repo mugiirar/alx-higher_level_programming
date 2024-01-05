@@ -1,5 +1,7 @@
 #!/usr/bin/env python
-# finding largest number
+"""finding largest number"""
+
+
 def find_peak(list_of_integers):
     num = len(list_of_integers)
     
