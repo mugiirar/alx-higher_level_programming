@@ -1,9 +1,5 @@
 #!/bin/bash
 
-resp=$(curl -s -o /dev/null -w "%{http_code}" "$1")
+#body
 
-if [ "$resp" -eq 200 ]; then
-	curl -s "$1"
-fi
-
-
+curl -Lsf "$1"
