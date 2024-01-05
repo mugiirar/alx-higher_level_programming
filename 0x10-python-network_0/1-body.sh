@@ -1,5 +1,3 @@
 #!/bin/bash
-
 # body
-
-curl -Lsf "$1"
+curl -LsfX GET "$1"
