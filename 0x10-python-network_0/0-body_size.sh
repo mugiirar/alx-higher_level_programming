@@ -5,5 +5,5 @@ if [ "$#" -eq 0 ]; then
 	exit 1
 
 else
-	curl -s "$#" | wc -c
+	echo "curl -s "$#" | wc -c"
 fi
