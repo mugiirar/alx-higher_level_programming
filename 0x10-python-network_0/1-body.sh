@@ -1,4 +1,4 @@
 #!/bin/bash
 #body of the message
 
-curl -sLX GET "$1"
+curl -sL "$1"
