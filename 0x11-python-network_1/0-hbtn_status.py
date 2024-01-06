@@ -3,11 +3,12 @@ import urllib.request
 
 """ Python script that fetches https://alx-intranet.hbtn.io/status"""
 
-url = 'https://alx-intranet.hbtn.io/status'
 
-req = urllib.request.Request(url)
+req = urllib.request.Request("https://alx-intranet.hbtn.io/status")
 
 with urllib.request.urlopen(req) as response:
-    the_page = response.read()
-
-print (the_page)
+    content = response.read()
+    print("Body response:")
+    print("\t- type: {}".format(type(content)))
+    print("\t- content: {}".format(content))
+    print("\t- utf8 content: {}".format(content.decode("utf-8")))
