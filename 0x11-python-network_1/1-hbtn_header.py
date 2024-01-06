@@ -4,11 +4,12 @@
 import sys
 import urllib.request
 
-url = sys.argv[1]
+if __name__ == "__main__":
+    url = sys.argv[1]
 
-req = urllib.request.Request(url)
+    req = urllib.request.Request(url)
 
-with urllib.request.urlopen(req) as response:
-    content = dict(response.headers)
-    req_num = content.get("X-Request-Id")
-    print(req_num)
+    with urllib.request.urlopen(req) as response:
+        content = dict(response.headers)
+        req_num = content.get("X-Request-Id")
+        print(req_num)
