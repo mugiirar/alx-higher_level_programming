@@ -6,11 +6,11 @@ import requests
 
 
 if __name__ == "__main__":
-    if sys.argv[1] == None:
-        info = {"q" : ""}
+    if len(sys.argv) == 1:
+        info = {"q": ""}
 
     else:
-        info = {"q" : sys.argv[1] }
+        info = {"q": sys.argv[1] }
 
     url = "http://0.0.0.0:5000/search_user"
 
