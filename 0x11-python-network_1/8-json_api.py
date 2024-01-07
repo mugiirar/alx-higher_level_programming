@@ -19,7 +19,7 @@ if __name__ == "__main__":
     try:
         cont = req.json()
         if cont == {}:
-            print("Not a valid JSON")
+            print("No result")
         else:
             print("[{}] {}".format(cont.get("id"), cont.get("name"))
 
