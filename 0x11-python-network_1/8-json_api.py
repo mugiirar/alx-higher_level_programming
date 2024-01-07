@@ -7,11 +7,13 @@ import requests
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
-        data = {"q": ""}
+        letter = ""
     else:
-        data = {"q": sys.argv[1]}
+        letter = sys.argv[1]
 
-    req = requests.post(url, data=data)
+    arg = {"q": letter}
+
+    req = requests.post(url, data=arg)
 
     try:
         content = req.json()
