@@ -2,7 +2,7 @@
 """Python script that takes in a letter and sends a POST
 """
 import sys
-import responses
+import requests
 
 
 if __name__ == "__main__":
@@ -11,7 +11,7 @@ if __name__ == "__main__":
     else:
         data = {"q": sys.argv[1]}
 
-    req = responses.get(url, data=data)
+    req = requests.get(url, data=data)
 
     try:
         content = req.json()
