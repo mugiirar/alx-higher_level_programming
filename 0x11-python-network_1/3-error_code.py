@@ -6,7 +6,7 @@ import urllib.request
 
 
 if __name__ == "__main__":
-    url = sys.argv[1]
+    url = sys.arv[1]
 
     req = urllib.request.Request(url)
 
@@ -14,6 +14,5 @@ if __name__ == "__main__":
         with urllib.request.urlopen(req) as response:
             ans = response.read().decode("ascii")
             print (ans)
-    except urllib.error.HTTPError as e:
-        print ("Error code: {}".format(e.code))
-
+    except urllib.error.HTTPError as err:
+        print("Error code: {}".format(err.code))
