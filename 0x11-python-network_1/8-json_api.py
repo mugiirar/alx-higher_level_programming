@@ -11,7 +11,7 @@ if __name__ == "__main__":
     else:
         data = {"q": sys.argv[1]}
 
-    req = requests.get(url, data=data)
+    req = requests.post(url, data=data)
 
     try:
         content = req.json()
