@@ -10,7 +10,7 @@ request.get('https://swapi-api.hbtn.io/api/films/' + filmId + '/', function (err
     console.log(error);
   } else {
     const filmData = JSON.parse(responseBody);
-    
+
     for (const characterUrl of filmData.characters) {
       request.get(characterUrl, function (error, res, characterBody) {
         const characterData = JSON.parse(characterBody);
