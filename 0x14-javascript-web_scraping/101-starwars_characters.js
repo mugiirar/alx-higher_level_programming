@@ -9,12 +9,12 @@ request(filmUrl, function (error, response, body) {
   }
 });
 
-function printCharacters(characterUrls, currentIndex) {
+function printCharacters (characterUrls, currentIndex) {
   request(characterUrls[currentIndex], function (error, response, body) {
     if (!error) {
       const characterData = JSON.parse(body);
       console.log(characterData.name);
-      
+
       if (currentIndex + 1 < characterUrls.length) {
         printCharacters(characterUrls, currentIndex + 1);
       }
